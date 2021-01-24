@@ -1,0 +1,13 @@
+#basic image
+From node 
+# set working directory
+RUN mkdir /usr/src/app
+# copy all times from current directory to docker
+
+ENV PATH /usr/src/app/node_modules/.bin:$PATH
+
+# install and cache dependencies
+RUN yarn 
+
+# start app
+CMD ['npm','start']
